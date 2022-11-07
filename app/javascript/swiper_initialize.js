@@ -1,7 +1,4 @@
-// import Swiper JS
 import Swiper from 'swiper/swiper-bundle.js';
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import Swiper styles
 import 'swiper/swiper-bundle.css';
 
 window.addEventListener('load', (e) => {
