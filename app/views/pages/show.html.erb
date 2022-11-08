@@ -1,17 +1,12 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" page="1">
-          <%= render partial: "page", locals: { page: @page } %>
-        </div>
-        <div class="swiper-slide" page="2">
-          <%= render partial: "page", locals: { page: @page } %>
-        </div>
-        <div class="swiper-slide" page="3">
-          <%= render partial: "page", locals: { page: @page } %>
-        </div>
-        <div class="swiper-slide" page="4">
-          <%= render partial: "page", locals: { page: @page } %>
-        </div>
+        <% @pages.each do |page| %>
+          <div class="swiper-slide" page="<%= page.id %>">
+            <%= render partial: "page", locals: { page: page } %>
+          </div>
+        <% end %>
+    
+   
       </div>
       <div class="swiper-pagination"></div>
     </div>

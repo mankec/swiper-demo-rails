@@ -1,14 +1,7 @@
-  <% if page == 0 %>
-    <div id="prev"></div>
-  <% else %>
-    <%#= link_to root_path(page: page - 1) do %>
-      <div id="prev"></div>
-    <%# end %>
-  <% end %>
-     
-  <%#= link_to root_path(page: page + 1) do %>
-    <div id="next"></div>
-  <%# end %>  
-  
-  <span class="span-page">This is page <%= page.id %></span>
+ 
+  <span class="span-page text-success">This is page <%= page.id %></span>
   <span class="span-time">Current time <%= Time.zone.now %></span>
+
+  <%= form_with url: page_url(page: page) do |f| %>
+    <%#= f.submit "next page (#{page})" %>
+  <% end %>
