@@ -50,7 +50,7 @@ body {
 
 .span-page {
   margin-right: 1.5rem;
-  color: red;
+  /* color: red; */
 }
 
 .span-time {
@@ -75,4 +75,41 @@ body {
   cursor: pointer;
   position: absolute;
   left: 0;
+}
+
+/* gofordesi-webapp */
+
+.container-box {
+  border-left: 3px solid #ffb730;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 40%);
+  background: #fff;
+  padding: 0 20px;
+}
+
+.profile-details-section {
+  padding: 30px 0;
+  float: left;
+  background: #fff;
+  width: 100%;
+}
+
+.profile-details-section h2 {
+  line-height: 25px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #de3b00;
+}
+
+.profile-details-section p span {
+  font-weight: 600;
+}
+
+.profile-details-section .profile-img {
+  border-radius: 100%;
+  border: 2px solid #de3b00;
+  margin-top: -40px;
+  width: 200px;
+  object-fit: contain;
+  height: 200px;
+  background: #eee;
 }
