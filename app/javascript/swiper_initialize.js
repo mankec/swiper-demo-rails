@@ -1,7 +1,8 @@
 import Swiper from 'swiper/swiper-bundle.js';
 import 'swiper/swiper-bundle.css';
 
-window.addEventListener('load', (e) => {
+window.addEventListener('turbo:load', (event) => {
+  console.log("turbo:load")
   const swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     pagination: {
@@ -23,52 +24,36 @@ window.addEventListener('load', (e) => {
     if ((index + 1) == activeSlideNumber)
       swiper.slideTo(index, 500, true)
   })
-
-
   // swiper.on('slideChange', function () {
   //   console.log('slide changed');
   // });
 
-
-
-
-
-  function modifyState(activeSlide) {
+  function modifyState(pageNumber) {
     let stateObj = { id: "100" };
     window.history.replaceState(stateObj,
-      "Page", `${activeSlide.getAttribute('page')}`);
-
+      "Page", `${pageNumber}`);
   }
 
-  // Select the node that will be observed for mutations
-  const targetNode = document.querySelector('.mySwiper')
-
-  // Callback function to execute when mutations are observed
-  const callback = (mutationList) => {
-    let executed = false;
-    for (const mutation of mutationList) {
-
-      if (mutation.attributeName === 'aria-label') {
-        const activeSlide = document.querySelector('.swiper-slide-active')
-        modifyState(activeSlide)
-        return executed = true;
-      }
-      if (executed) break;
-    }
-  };
-
-  // Create an observer instance linked to the callback function
-  const observer = new MutationObserver(callback);
-
-  // Start observing the target node for configured mutations
-  observer.observe(targetNode, {
-    attributes: true,
-    childList: true,
-    subtree: true
+  swiper.on('slideNextTransitionEnd', function () {
+    console.log('next')
+    const activeSlide = document.querySelector('.swiper-slide-active')
+    let pageNumber = activeSlide.getAttribute('page')
+    modifyState(pageNumber)
   });
 
+  swiper.on('slidePrevTransitionEnd', function () {
+    console.log('prev')
+    const activeSlide = document.querySelector('.swiper-slide-active')
+    let pageNumber = activeSlide.getAttribute('page')
+    modifyState(pageNumber)
+  });
 
+  swiper.on('slideChangeTransitionEnd', function (index, elem) {
+
+  })
 
 
 
 })
+
+
