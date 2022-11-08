@@ -1,7 +1,4 @@
- 
+  <span class="mr-2"><%= page.title %></span>
   <span class="span-page text-success">This is page <%= page.id %></span>
   <span class="span-time">Current time <%= Time.zone.now %></span>
 
-  <%= form_with url: page_url(page: page) do |f| %>
-    <%#= f.submit "next page (#{page})" %>
-  <% end %>

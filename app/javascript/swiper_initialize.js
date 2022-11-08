@@ -22,7 +22,7 @@ window.addEventListener('turbo:load', (event) => {
 
   slides.forEach(function (slide, index) {
     if ((index + 1) == activeSlideNumber)
-      swiper.slideTo(index, 500, true)
+      swiper.slideTo(index, 0, false)
   })
   // swiper.on('slideChange', function () {
   //   console.log('slide changed');
