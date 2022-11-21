@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :pages, only: [:index, :show]
-  get "page", controller: "pages"
-  post "page", controller: "pages"
+  root to: "pages#index"
+  get "pages/:id", controller: "pages", action: :show
+  get "append", controller: "pages", action: :append
+  #get "page", controller: "pages"
+  #post "page", controller: "pages"
 end
