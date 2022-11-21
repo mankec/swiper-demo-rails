@@ -1,20 +1,8 @@
-<div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-
-    <div class="swiper-slide" page="1">
-      <%= render partial: "member" %>
-    </div>
-
-    <div class="swiper-slide" page="2">
-      <%= render partial: "member" %>
-    </div>
-
-    <div class="swiper-slide" page="3">
-      <%= render partial: "member" %>
-    </div>
-  </div>
-  <div class="swiper-pagination"></div>
-</div>
-
-
- 
+  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <%# PagesController::NUMBER_OF_SLIDES.times do |page| %>
+          <%= render partial: "member" %>
+        <%# end %>
+      </div>
+      <div class="swiper-pagination"></div>
+  </div> 

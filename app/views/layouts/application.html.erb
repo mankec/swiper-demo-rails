@@ -8,13 +8,148 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'original', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="" data-test-current-member-profile-id="e89f503e-4632-4eb4-92ff-b2cf37989497">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ5GQ2C" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript> 
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="header" class="
+                  headerbg
+                  hidden-on-mobile
+                  ">
+      <div class="container d-flex align-items-center ">
+        <a class="logo mr-auto" href="/">
+          <img alt="Indian Dating in USA &amp; Canada"
+            src="/packs/media/images/Go-For-Desi-Logo-9e90ca344ca5b987b5a4a361bc4e5a6d.png" />
+        </a>
+        <nav class="nav-menu">
+          <ul class="navbar-nav navbar-expand d-flex align-items-center">
+            <turbo-cable-stream-source channel="Turbo::StreamsChannel"
+              signed-stream-name="Im1haW4tYmVsbC1zdHJlYW0tZm9yLXByb2ZpbGUtaWQtZTg5ZjUwM2UtNDYzMi00ZWI0LTkyZmYtYjJjZjM3OTg5NDk3Ig==--88f387b42e9186e2bd2cc79b12b4e8e64240c1b135e0abfd76b0cc3017d3f20a">
+            </turbo-cable-stream-source>
+            <li class='nav-item dropdown profilenav' id='main-bell' data-controller='main-bell'
+              data-main-bell-unreads='[]' data-main-bell-pending-interests-count="0"
+              data-main-bell-sum-of-unread-messages-count="0" data-main-bell-all-count='0' data-turbo-permanent>
+              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
+                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="profilename">Menu</span>
+
+                <img src="/packs/media/images/avatar_male-c431320dc871f43b80828e17615b7963.png" loading="lazy"
+                  alt="Profile Picture" class="object-fit-cover rounded-circle w-h-50" oncontextmenu="return false;" />
+
+                <span class="commonNotification d-none" data-test='unread-count'>0</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/profile/show">My Profile</a>
+                <a class="dropdown-item" href="/member_profiles">Find My Matches</a>
+                <a class="dropdown-item" href="/interests">
+                  My Connections
+                </a> <a class="dropdown-item" href="/interests/index_interests_for_messages">
+                  Messages
+                </a> <a class="dropdown-item" href="/notifications/edit">Edit Notifications</a>
+                <a class="dropdown-item" href="/profile/daily_credit_balance">Daily Credit Balance</a>
+                <a class="dropdown-item" href="/security_settings/index">Security Settings</a>
+                <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method"
+                  value="delete" /><input class="dropdown-item" type="submit" value="Log Out" /><input type="hidden"
+                  name="authenticity_token"
+                  value="I2EeKrhQFlzrGc36LH7TBAhgoJz_A8wCW5BuKgr8pTh7L0i7w9acR_l6nxuSpHd6-S3nPpVwBebsXN5sI4m1OQ" />
+                </form>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </header> 
+
+
+    <turbo-frame id="modal"></turbo-frame>
     <%= yield %>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+      <footer class="hidden-on-mobile">
+        <div class="container">
+          <div class="links-section">
+            <div class="row">
+              <div class="col-7 col-sm-3 col-lg-2">
+                <h5>Legal</h5>
+                <a href="https://app.termly.io/document/terms-of-use-for-saas/35fbb071-1d94-49df-bd50-6ef72141f860">Terms
+                  of Use</a>
+                <a href="https://app.termly.io/document/privacy-policy/bf2e775e-993c-4375-b567-56e288951671">Privacy
+                  Policy</a>
+                <a href="https://app.termly.io/document/cookie-policy/1496653d-7d72-411e-bac4-538455480510">Cookie
+                  Policy</a>
+                <a href="https://app.termly.io/document/disclaimer/0e66b595-5457-4aeb-9e7f-8893f3124dde">Disclaimer</a>
+              </div>
+              <div class="col-5 col-sm-3 col-lg-2">
+                <h5 class="invisible">Links</h5>
+                <a href="/safety-tips">Safety Tips</a>
+                <a href="/security">Security</a>
+                <a href="/faq">FAQ</a>
+                <a href="/blog" data-turbo="false">Blog</a>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <h5>Our Pages</h5>
+                <a href="/indian-dating-in-usa" target="_blank">Indian Dating in USA</a>
+                <a href="/indian-matrimony-in-usa" target="_blank">Indian Matrimonial in USA</a>
+                <a href="/indian-dating-in-canada" target="_blank">Indian Dating in Canada</a>
+                <a href="/indian-matrimony-in-canada" target="_blank">Indian Matrimonial in Canada</a>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <h5>Location</h5>
+                <p class="address">USA & Canada Office :</p>
+                <p class="address">
+                  Xceednet LLC<br>
+                  101 Eisenhower Pkwy,
+                  Suite 300, Roseland,
+                  New Jersey 07068
+                </p>
+
+                <h5>Download app from</h5>
+                <div class="apps">
+                  <a href="https://apps.apple.com/in/app/gofordesi/id1617637068" target="_blank">
+                    <img src="/packs/media/images/app-store-deadbe9a7595ff8a5639fedc15a7d455.png" alt="Get the App" />
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.gofordesi.android">
+                    <img src="/packs/media/images/google-play-cbd7be1792eeb7dd1eacb6e2f7118f3c.png" alt="Get the App" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-2">
+                <h5>Contact</h5>
+                <a href="/contact-us">Feedbacks &amp; Suggestions</a>
+                <a href="mailto:info@gofordesi.com"><i class="far fa-envelope mr-2"></i>info@gofordesi.com</a>
+                <a href="tel:1-7324568085"><i class="fas fa-phone-alt mr-2"></i>+1 732 456 8085</a>
+                <a href="tel:+91-8291845664"><i class="fas fa-phone-alt mr-2"></i>+91-8291845664</a>
+                <ul class="social-icons">
+                  <li> <a href="https://www.facebook.com/Gofordesi.US.Canada"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li> <a href="https://www.linkedin.com/company/go-for-desi"><i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li> <a href="https://www.instagram.com/gofordesi_/"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li> <a href="https://twitter.com/Go4Desi"><i class="fab fa-twitter"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-section">
+            <p>All rights reserved © 2022.</p>
+          </div>
+        </div>
+      </footer> 
+
+      < <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script> %>
   </body>
 </html>

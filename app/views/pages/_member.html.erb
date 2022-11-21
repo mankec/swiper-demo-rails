@@ -1,52 +1,536 @@
-    <div class="container-box mt-3 float-left w-100">
-      <div class="profile-details-section">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="id">Basic Information</h2>
+<div class="swiper-slide">
+  <section class="profile-list" id="profile1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class=" d-flex align-items-center mt-4">
+            <h4 class="mb-0">
+              Profile of - <span><%= Time.zone.now %></span>
+            </h4>
           </div>
-          <div class="col-md-9 col-12 mob-order-2">
-            <div class="row">
-              <div class="col-12 col-md-5">
-                <p>Age : <span>22 Years</span>
-                </p>
-                <p>Birth Date : <span>1st Jan 2000</span>
-                </p>
-                <p>Gender : <span>Female</span>
-                </p>
-                <p>Seeking : <span>Male</span>
-                </p>
-                <p>Interested in : <span>Both</span>
-                </p>
-                <p>Zip : <span>07068</span>
-                </p>
-                <p>Country : <span>United States</span>
-                </p>
-                <p>State : <span>New Jersey</span>
-                </p>
-                <p>City : <span>Roseland</span>
-                </p>
+        </div>
+      </div>
 
+      <div class="container-box mt-3 float-left w-100">
+        <div class="profile-details-section">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Basic Information</h2>
+            </div>
+            <div class="col-md-9 col-12 mob-order-2">
+              <div class="row">
+                <div class="col-12 col-md-5">
+                  <p>Age : <span>48 Years</span>
+                  </p>
+                  <p>Birth Date : <span>29th Jul 1974</span>
+                  </p>
+                  <p>Gender : <span>Female</span>
+                  </p>
+                  <p>Seeking : <span>Male</span>
+                  </p>
+                  <p>Interested in : <span>Dating</span>
+                  </p>
+                  <p>Zip : <span>77459</span>
+                  </p>
+                  <p>Country : <span>United States</span>
+                  </p>
+                  <p>State : <span>Texas</span>
+                  </p>
+                  <p>City : <span>Houston</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-7">
+                  <p>Religion : <span>Hindu</span>
+                  </p>
+                  <p>Community : <span>Punjabi community</span>
+                  </p>
+                  <p>Residency status : <span>Not Specified</span>
+                  </p>
+                  <p>Lives with family? : <span>Not Specified</span>
+                  </p>
+                  <p>City your family lives in : <span></span>
+                  </p>
+                  <p>Living in United States since : <span>Not Specified</span>
+                  </p>
+                  <p>Native Place : <span></span>
+                  </p>
+                  <p>Languages Spoken at Home : <span>English</span>
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-7">
-                <p>Religion : <span>Hindu</span>
-                </p>
-                <p>Community : <span>24 Manai Telugu Chettiar</span>
-                </p>
-                <p>Residency status : <span>Citizen</span>
-                </p>
-                <p>Lives with family? : <span>No</span>
-                </p>
-                <p>City your family lives in : <span></span>
-                </p>
-                <p>Living in United States since : <span>Birth</span>
-                </p>
-                <p>Native Place : <span>My Native place</span>
-                </p>
-                <p>Languages Spoken at Home : <span>Hindi</span>
-                </p>
+            </div>
+            <div class="col-md-3 col-12 mob-order-1">
+              <div class="text-center">
+                <a href="/member_profiles/3e30e798-9f4c-45f0-8a21-cce18eb3deba/image_modal">
+                  <%= image_tag("avatar.jpeg", alt: "Profile Picture", class: "object-fit-cover profile-img") %>
+
+                  <%# <img src="/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDA3IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab677c4f660139ad5e2530bbc00d920d15ec206b/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQzZBTnBBdWdEIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--659448cdc1e42ca85a4cf255144cfbf1c2b3ec76/80308164-9B35-4DC0-9392-F729A5EC9E3A.jpeg" loading="lazy" alt="Profile Picture" class="object-fit-cover profile-img" oncontextmenu="return false;"/> %>
+
+                  <p class="linktext mt-2">1 Photo</p>
+                </a>
               </div>
+              <div class='profile-show-page'>
+                <div class="profile-actions">
+                  <a class="btn btn-primary interestbtn" href="/interests/new?back_link=https%3A%2F%2Fwww.gofordesi.com%2Fmember_profiles%2F3e30e798-9f4c-45f0-8a21-cce18eb3deba&amp;to_member_profile_id=3e30e798-9f4c-45f0-8a21-cce18eb3deba">
+                  <i class="fas fa-heart"></i><span class="innertext pl-2">Express Interest</span>
+                  </a>    <a class="btn btn-primary viewprofilebtn interestbtn" data-turbo-frame="_top" href="/member_profiles/3e30e798-9f4c-45f0-8a21-cce18eb3deba?back_link=https%3A%2F%2Fwww.gofordesi.com%2Fmember_profiles%2F3e30e798-9f4c-45f0-8a21-cce18eb3deba">View Full Profile</a>
+                </div>
+       
+                <div class="mt-2 text-right">
+                  <a href="/reports/new?report_form%5Breportable_id%5D=3e30e798-9f4c-45f0-8a21-cce18eb3deba&amp;report_form%5Breportable_type%5D=MemberProfile">Report Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Lifestyle Information</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>Relationship to Profile : <span>Myself</span>
+              </p>
+              <p>Marital Status : <span>Not Specified</span>
+              </p>
+              <p>Have children? : <span>Not Specified</span>
+              </p>
+              <p>Height : <span>Not Specified</span>
+              </p>
+              <p>Blood Group : <span>Not Specified</span>
+              </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <p>Smoke? : <span>No</span>
+              </p>
+              <p>Drink? : <span>Not Specified</span>
+              </p>
+              <p>Diet : <span>Not Specified</span>
+              </p>
+              <p>Special case : <span>None</span>
+              </p>
+              <p>Pet Preference : <span>Not Specified</span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Astrology Details</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>Date of Birth: <span>29th Jul 1974</span>
+              </p>
+              <p>Time of Birth : <span></span>
+              </p>
+                <p>Are you Manglik?: <span></span>
+                </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <p>Country of Birth: <span>Not Specified</span>
+              </p>
+              <p>City of Birth : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Education Details</h2>
+            </div>
+            <div class="col-12">
+              <p>Education Level: <span>Not Specified</span>
+              </p>
+              <p>Education Field: <span>Not Specified</span>
+              </p>
+              <p>Education Description : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Career Details</h2>
+            </div>
+            <div class="col-12">
+              <p>Occupation: <span>Not Specified</span>
+              </p>
+              <p>Annual Income : <span>Not Specified</span>
+              </p>
+              <p>Occupation Description : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">More about Yourself and Ideal Partner</h2>
+            </div>
+            <div class="col-12">
+              <p>About Yourself & Family: <span></span>
+              </p>
+              <p>About your Ideal Partner : <span></span>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>   
+    </div>
+  </section>
+</div> 
+<div class="swiper-slide">
+  <section class="profile-list" id="profile1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class=" d-flex align-items-center mt-4">
+            <h4 class="mb-0">
+              Profile of - <span><%= Time.zone.now %></span>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-box mt-3 float-left w-100">
+        <div class="profile-details-section">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Basic Information</h2>
+            </div>
+            <div class="col-md-9 col-12 mob-order-2">
+              <div class="row">
+                <div class="col-12 col-md-5">
+                  <p>Age : <span>48 Years</span>
+                  </p>
+                  <p>Birth Date : <span>29th Jul 1974</span>
+                  </p>
+                  <p>Gender : <span>Female</span>
+                  </p>
+                  <p>Seeking : <span>Male</span>
+                  </p>
+                  <p>Interested in : <span>Dating</span>
+                  </p>
+                  <p>Zip : <span>77459</span>
+                  </p>
+                  <p>Country : <span>United States</span>
+                  </p>
+                  <p>State : <span>Texas</span>
+                  </p>
+                  <p>City : <span>Houston</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-7">
+                  <p>Religion : <span>Hindu</span>
+                  </p>
+                  <p>Community : <span>Punjabi community</span>
+                  </p>
+                  <p>Residency status : <span>Not Specified</span>
+                  </p>
+                  <p>Lives with family? : <span>Not Specified</span>
+                  </p>
+                  <p>City your family lives in : <span></span>
+                  </p>
+                  <p>Living in United States since : <span>Not Specified</span>
+                  </p>
+                  <p>Native Place : <span></span>
+                  </p>
+                  <p>Languages Spoken at Home : <span>English</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 mob-order-1">
+              <div class="text-center">
+                <a href="/member_profiles/3e30e798-9f4c-45f0-8a21-cce18eb3deba/image_modal">
+                  <%= image_tag("avatar.jpeg", alt: "Profile Picture", class: "object-fit-cover profile-img") %>
+
+                  <%# <img src="/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDA3IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab677c4f660139ad5e2530bbc00d920d15ec206b/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQzZBTnBBdWdEIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--659448cdc1e42ca85a4cf255144cfbf1c2b3ec76/80308164-9B35-4DC0-9392-F729A5EC9E3A.jpeg" loading="lazy" alt="Profile Picture" class="object-fit-cover profile-img" oncontextmenu="return false;"/> %>
+
+                  <p class="linktext mt-2">1 Photo</p>
+                </a>
+              </div>
+              <div class='profile-show-page'>
+                <div class="profile-actions">
+                  <a class="btn btn-primary interestbtn" href="/interests/new?back_link=https%3A%2F%2Fwww.gofordesi.com%2Fmember_profiles%2F3e30e798-9f4c-45f0-8a21-cce18eb3deba&amp;to_member_profile_id=3e30e798-9f4c-45f0-8a21-cce18eb3deba">
+                  <i class="fas fa-heart"></i><span class="innertext pl-2">Express Interest</span>
+                  </a>    <a class="btn btn-primary viewprofilebtn interestbtn" data-turbo-frame="_top" href="/member_profiles/3e30e798-9f4c-45f0-8a21-cce18eb3deba?back_link=https%3A%2F%2Fwww.gofordesi.com%2Fmember_profiles%2F3e30e798-9f4c-45f0-8a21-cce18eb3deba">View Full Profile</a>
+                </div>
+       
+                <div class="mt-2 text-right">
+                  <a href="/reports/new?report_form%5Breportable_id%5D=3e30e798-9f4c-45f0-8a21-cce18eb3deba&amp;report_form%5Breportable_type%5D=MemberProfile">Report Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Lifestyle Information</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>Relationship to Profile : <span>Myself</span>
+              </p>
+              <p>Marital Status : <span>Not Specified</span>
+              </p>
+              <p>Have children? : <span>Not Specified</span>
+              </p>
+              <p>Height : <span>Not Specified</span>
+              </p>
+              <p>Blood Group : <span>Not Specified</span>
+              </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <p>Smoke? : <span>No</span>
+              </p>
+              <p>Drink? : <span>Not Specified</span>
+              </p>
+              <p>Diet : <span>Not Specified</span>
+              </p>
+              <p>Special case : <span>None</span>
+              </p>
+              <p>Pet Preference : <span>Not Specified</span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Astrology Details</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>Date of Birth: <span>29th Jul 1974</span>
+              </p>
+              <p>Time of Birth : <span></span>
+              </p>
+                <p>Are you Manglik?: <span></span>
+                </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <p>Country of Birth: <span>Not Specified</span>
+              </p>
+              <p>City of Birth : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Education Details</h2>
+            </div>
+            <div class="col-12">
+              <p>Education Level: <span>Not Specified</span>
+              </p>
+              <p>Education Field: <span>Not Specified</span>
+              </p>
+              <p>Education Description : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Career Details</h2>
+            </div>
+            <div class="col-12">
+              <p>Occupation: <span>Not Specified</span>
+              </p>
+              <p>Annual Income : <span>Not Specified</span>
+              </p>
+              <p>Occupation Description : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">More about Yourself and Ideal Partner</h2>
+            </div>
+            <div class="col-12">
+              <p>About Yourself & Family: <span></span>
+              </p>
+              <p>About your Ideal Partner : <span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> 
+<div class="swiper-slide">
+  <section class="profile-list" id="profile1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class=" d-flex align-items-center mt-4">
+            <h4 class="mb-0">
+              Profile of - <span><%= Time.zone.now %></span>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-box mt-3 float-left w-100">
+        <div class="profile-details-section">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Basic Information</h2>
+            </div>
+            <div class="col-md-9 col-12 mob-order-2">
+              <div class="row">
+                <div class="col-12 col-md-5">
+                  <p>Age : <span>48 Years</span>
+                  </p>
+                  <p>Birth Date : <span>29th Jul 1974</span>
+                  </p>
+                  <p>Gender : <span>Female</span>
+                  </p>
+                  <p>Seeking : <span>Male</span>
+                  </p>
+                  <p>Interested in : <span>Dating</span>
+                  </p>
+                  <p>Zip : <span>77459</span>
+                  </p>
+                  <p>Country : <span>United States</span>
+                  </p>
+                  <p>State : <span>Texas</span>
+                  </p>
+                  <p>City : <span>Houston</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-7">
+                  <p>Religion : <span>Hindu</span>
+                  </p>
+                  <p>Community : <span>Punjabi community</span>
+                  </p>
+                  <p>Residency status : <span>Not Specified</span>
+                  </p>
+                  <p>Lives with family? : <span>Not Specified</span>
+                  </p>
+                  <p>City your family lives in : <span></span>
+                  </p>
+                  <p>Living in United States since : <span>Not Specified</span>
+                  </p>
+                  <p>Native Place : <span></span>
+                  </p>
+                  <p>Languages Spoken at Home : <span>English</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 mob-order-1">
+              <div class="text-center">
+                <a href="/member_profiles/3e30e798-9f4c-45f0-8a21-cce18eb3deba/image_modal">
+                  <%= image_tag("avatar.jpeg", alt: "Profile Picture", class: "object-fit-cover profile-img") %>
+                  <%# <img src="/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDA3IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab677c4f660139ad5e2530bbc00d920d15ec206b/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQzZBTnBBdWdEIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--659448cdc1e42ca85a4cf255144cfbf1c2b3ec76/80308164-9B35-4DC0-9392-F729A5EC9E3A.jpeg" loading="lazy" alt="Profile Picture" class="object-fit-cover profile-img" oncontextmenu="return false;"/> %>
+
+                  <p class="linktext mt-2">1 Photo</p>
+                </a>
+              </div>
+              <div class='profile-show-page'>
+                <div class="profile-actions">
+                  <a class="btn btn-primary interestbtn" href="/interests/new?back_link=https%3A%2F%2Fwww.gofordesi.com%2Fmember_profiles%2F3e30e798-9f4c-45f0-8a21-cce18eb3deba&amp;to_member_profile_id=3e30e798-9f4c-45f0-8a21-cce18eb3deba">
+                  <i class="fas fa-heart"></i><span class="innertext pl-2">Express Interest</span>
+                  </a>    <a class="btn btn-primary viewprofilebtn interestbtn" data-turbo-frame="_top" href="/member_profiles/3e30e798-9f4c-45f0-8a21-cce18eb3deba?back_link=https%3A%2F%2Fwww.gofordesi.com%2Fmember_profiles%2F3e30e798-9f4c-45f0-8a21-cce18eb3deba">View Full Profile</a>
+                </div>
+       
+                <div class="mt-2 text-right">
+                  <a href="/reports/new?report_form%5Breportable_id%5D=3e30e798-9f4c-45f0-8a21-cce18eb3deba&amp;report_form%5Breportable_type%5D=MemberProfile">Report Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Lifestyle Information</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>Relationship to Profile : <span>Myself</span>
+              </p>
+              <p>Marital Status : <span>Not Specified</span>
+              </p>
+              <p>Have children? : <span>Not Specified</span>
+              </p>
+              <p>Height : <span>Not Specified</span>
+              </p>
+              <p>Blood Group : <span>Not Specified</span>
+              </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <p>Smoke? : <span>No</span>
+              </p>
+              <p>Drink? : <span>Not Specified</span>
+              </p>
+              <p>Diet : <span>Not Specified</span>
+              </p>
+              <p>Special case : <span>None</span>
+              </p>
+              <p>Pet Preference : <span>Not Specified</span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Astrology Details</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>Date of Birth: <span>29th Jul 1974</span>
+              </p>
+              <p>Time of Birth : <span></span>
+              </p>
+                <p>Are you Manglik?: <span></span>
+                </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <p>Country of Birth: <span>Not Specified</span>
+              </p>
+              <p>City of Birth : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Education Details</h2>
+            </div>
+            <div class="col-12">
+              <p>Education Level: <span>Not Specified</span>
+              </p>
+              <p>Education Field: <span>Not Specified</span>
+              </p>
+              <p>Education Description : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">Career Details</h2>
+            </div>
+            <div class="col-12">
+              <p>Occupation: <span>Not Specified</span>
+              </p>
+              <p>Annual Income : <span>Not Specified</span>
+              </p>
+              <p>Occupation Description : <span></span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <h2 class="id">More about Yourself and Ideal Partner</h2>
+            </div>
+            <div class="col-12">
+              <p>About Yourself & Family: <span></span>
+              </p>
+              <p>About your Ideal Partner : <span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> 
