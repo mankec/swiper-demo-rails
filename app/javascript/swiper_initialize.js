@@ -3,57 +3,50 @@ import 'swiper/swiper-bundle.css';
 
 window.addEventListener('turbo:load', (event) => {
   console.log("turbo:load")
+
+  initializeSwipe(0)
+
+})
+
+function initializeSwipe(index) {
+  console.log(`initializeSwipe ${index}`)
+
   const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
+    spaceBetween: 0,
+    initialSlide: index,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   });
 
-  let url = window.location.href
-  const splitUrl = window.location.href.split('/')
-
-  const [activeSlideNumber] = splitUrl.slice(-1)
-  console.log(activeSlideNumber)
-  console.log('Current url ' + url)
-
-  const slides = document.querySelectorAll('.swiper-slide')
-
-  slides.forEach(function (slide, index) {
-    if ((index + 1) == activeSlideNumber)
-      swiper.slideTo(index, 0, false)
-  })
-  // swiper.on('slideChange', function () {
-  //   console.log('slide changed');
-  // });
-
-  function modifyState(pageNumber) {
-    let stateObj = { id: "100" };
-    window.history.replaceState(stateObj,
-      "Page", `${pageNumber}`);
+  function appendSlide() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      swiper.appendSlide(this.responseText)
+    }
+    xhttp.open("GET", `append`);
+    xhttp.send();
   }
 
-  swiper.on('slideNextTransitionEnd', function () {
-    console.log('next')
-    const activeSlide = document.querySelector('.swiper-slide-active')
-    let pageNumber = activeSlide.getAttribute('page')
-    modifyState(pageNumber)
-  });
+  swiper.on('slideChangeTransitionEnd', function () {
 
-  swiper.on('slidePrevTransitionEnd', function () {
-    console.log('prev')
-    const activeSlide = document.querySelector('.swiper-slide-active')
-    let pageNumber = activeSlide.getAttribute('page')
-    modifyState(pageNumber)
-  });
+    let index = swiper.activeIndex
+    let lastSlideIndex = swiper.slides.length - 1
 
-  swiper.on('slideChangeTransitionEnd', function (index, elem) {
+    if (index == lastSlideIndex) {
+      console.log('APPEND SLIDE')
+      appendSlide()
+      swiper.update()
+    }
+
+
+    setTimeout(() => {
+      swiper.destroy()
+      initializeSwipe(index)
+    }, 100)
 
   })
-
-
-
-})
+}
 
 
