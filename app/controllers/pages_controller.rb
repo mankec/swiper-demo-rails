@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def append
-    render partial: "member"
+    render partial: "page"
   end
 
   # def page
