@@ -29,29 +29,17 @@ function initializeSwipe(index) {
     xhttp.send();
   }
 
-  swiper.on('destroy', function () {
-    console.log('Swiper destroyed')
-  })
-
   swiper.on('slideChangeTransitionEnd', function () {
 
-    let index = swiper.activeIndex
     let lastSlideIndex = swiper.slides.length - 1
     console.log(index)
     console.log(lastSlideIndex)
 
-    if (index == lastSlideIndex) {
+
+    if (swiper.activeIndex == lastSlideIndex) {
       console.log('APPEND SLIDE')
       appendSlide()
-      swiper.destroy(false, false)
-      setTimeout(() => {
-
-        initializeSwipe(index)
-
-      }, 100)
     }
-
-
 
   })
 }
