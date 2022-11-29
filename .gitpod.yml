@@ -1,0 +1,6 @@
+tasks:
+  - init: bin/setup
+    command: rails s
+ports:
+  - port: 3000
+    onOpen: open-browser
