@@ -1,6 +1,6 @@
-<% PagesController::NUMBER_OF_SLIDES.times do |page| %>
+<% pages.each do |page| %>
 
-  <div class="swiper-slide">
+  <div class="swiper-slide" data-history="<%= page.id %>">
     <section class="profile-list" id="profile1">
       <div class="container">
         <div class="row">
@@ -181,4 +181,5 @@
   </div> 
 
 <% end %>
+
 
