@@ -29,7 +29,7 @@ function initializeSwipe(index) {
   });
 
   let activeSlide = document.querySelector('.swiper-slide-active')
-  let pageId = activeSlide.getAttribute('data-history')
+  let pageId = parseInt(activeSlide.getAttribute('data-history')) + 1
 
   function appendSlide(id) {
     const xhttp = new XMLHttpRequest();
